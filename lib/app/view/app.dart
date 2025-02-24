@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rydon/counter/counter.dart';
 import 'package:rydon/l10n/l10n.dart';
+import 'package:rydon/pages/widgets/custom_textfield.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -16,7 +17,10 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: const CustomTextField(
+        hintext: 'Ex: John',
+        isPassword: true,
+      ),
     );
   }
 }
