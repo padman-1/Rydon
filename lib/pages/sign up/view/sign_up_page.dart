@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rydon/app/app.dart';
-import 'package:rydon/pages/widgets/custom_textfield.dart';
+import 'package:rydon/widgets/custom_textfield.dart';
 import 'package:rydon/util/colors.dart';
 import 'package:rydon/extensions/build_context_extensions.dart';
 
