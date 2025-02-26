@@ -39,12 +39,10 @@ class _SignUpPageState extends State<SignUpPage> {
                         children: [
                           Text(
                             'Create Account',
-                            style: GoogleFonts.poppins(
-                              fontSize: 30,
-                            ),
+                            style: Theme.of(context).textTheme.titleLarge,
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Text(
                             'Fill your information below or register with your social account',
@@ -57,6 +55,9 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                         ],
                       ),
+                    ),
+                    const SizedBox(
+                      height: 15,
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 15.0),
@@ -132,7 +133,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                 ],
                               ),
                               const SizedBox(
-                                height: 20,
+                                height: 10,
                               ),
                             ],
                           ),
@@ -145,6 +146,9 @@ class _SignUpPageState extends State<SignUpPage> {
                                   onPressed: () {},
                                   child: const Text(
                                     'Sign Up',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -164,21 +168,69 @@ class _SignUpPageState extends State<SignUpPage> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.symmetric(
-                                          horizontal: 8.0),
+                                        horizontal: 5,
+                                      ),
                                       child: Text(
                                         'or sign up with',
                                         style: Theme.of(context)
                                             .textTheme
                                             .bodySmall
                                             ?.copyWith(
-                                                color: AppColors.signUpWith),
+                                              color: AppColors.signUpWith,
+                                              fontWeight: FontWeight.w600,
+                                            ),
                                       ),
                                     ),
                                     const Expanded(
                                       child: Divider(
-                                        color: Colors.grey, // Line color
+                                        color: AppColors.divider, // Line color
                                         thickness: 1, // Line thickness
                                       ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 30,
+                              ),
+                              SizedBox(
+                                width: devSize.width / 2,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(10),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: AppColors.socialsBorder,
+                                        ),
+                                        borderRadius: BorderRadius.circular(17),
+                                      ),
+                                      child: Image.asset(
+                                          'assets/images/apple.png'),
+                                    ),
+                                    Container(
+                                      padding: const EdgeInsets.all(10),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: AppColors.socialsBorder,
+                                        ),
+                                        borderRadius: BorderRadius.circular(17),
+                                      ),
+                                      child: Image.asset(
+                                          'assets/images/google.png'),
+                                    ),
+                                    Container(
+                                      padding: const EdgeInsets.all(10),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: AppColors.socialsBorder,
+                                        ),
+                                        borderRadius: BorderRadius.circular(17),
+                                      ),
+                                      child: Image.asset(
+                                          'assets/images/facebook.png'),
                                     ),
                                   ],
                                 ),

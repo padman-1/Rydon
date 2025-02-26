@@ -24,9 +24,10 @@ class App extends StatelessWidget {
             ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.divider,
+            backgroundColor: AppColors.mainButton,
             foregroundColor: Colors.white,
-            elevation: 10,
+            elevation: 5,
+            side: BorderSide(width: 2, color: AppColors.divider),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
@@ -37,10 +38,6 @@ class App extends StatelessWidget {
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       home: const SignUpPage(),
-      // home: const CustomTextField(
-      //   hintext: 'Ex: John',
-      //   isPassword: true,
-      // ),
     );
   }
 }
