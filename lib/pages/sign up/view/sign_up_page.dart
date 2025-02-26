@@ -1,13 +1,8 @@
-import 'dart:ffi';
-
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:rydon/app/app.dart';
-import 'package:rydon/widgets/custom_textfield.dart';
+import 'package:rydon/pages/login/view/login_page.dart';
 import 'package:rydon/util/colors.dart';
-import 'package:rydon/extensions/build_context_extensions.dart';
+import 'package:rydon/widgets/custom_textfield.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -256,6 +251,16 @@ class _SignUpPageState extends State<SignUpPage> {
                                             decoration:
                                                 TextDecoration.underline,
                                           ),
+                                      recognizer: TapGestureRecognizer()
+                                        ..onTap = () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const LoginPage(),
+                                            ),
+                                          );
+                                        },
                                     ),
                                   ],
                                 ),
