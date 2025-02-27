@@ -1,5 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:rydon/pages/new_password/view/new_password_page.dart';
+import 'package:rydon/pages/otp_verification/view/otp_verification.dart';
+import 'package:rydon/pages/sign%20up/view/sign_up_page.dart';
 import 'package:rydon/util/colors.dart';
 import 'package:rydon/widgets/custom_textfield.dart';
 
@@ -40,37 +43,47 @@ class _LoginPageState extends State<LoginPage> {
                   height: 20,
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 15.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Email',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
-                      CustomTextField(
+                      const CustomTextField(
                         hintext: 'example@gmail.com',
                       ),
-                      Text(
+                      const Text(
                         'Password',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
-                      CustomTextField(
+                      const CustomTextField(
                         hintext: '123456789',
                         isPassword: true,
                       ),
                       Align(
                         alignment: Alignment.bottomRight,
-                        child: Text(
-                          'Forgot Password?',
-                          textAlign: TextAlign.right,
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            color: AppColors.signUpWith,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const NewPasswordPage(),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            'Forgot Password?',
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: AppColors.signUpWith,
+                            ),
                           ),
                         ),
                       ),
@@ -84,7 +97,15 @@ class _LoginPageState extends State<LoginPage> {
                             SizedBox(
                               width: devSize.width / 2,
                               child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const OTPVerification(),
+                                    ),
+                                  );
+                                },
                                 child: const Text(
                                   'Sign In',
                                   style: TextStyle(
@@ -202,7 +223,7 @@ class _LoginPageState extends State<LoginPage> {
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                const LoginPage(),
+                                                const SignUpPage(),
                                           ),
                                         );
                                       },
