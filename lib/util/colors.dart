@@ -19,4 +19,5 @@ class AppColors {
   static const Color continueButton = Color(0XFF969179);
   static const Color textFieldHint = Color(0XFF9F9696);
   static const Color socialsBorder = Color(0XFF989494);
+  static const Color backButtonBorder = Color(0XFF716F6F);
 }
