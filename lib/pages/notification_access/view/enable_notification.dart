@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:rydon/my_icons/custom_icons_icons.dart';
-import 'package:rydon/pages/location/view/manual_location.dart';
-import 'package:rydon/pages/notification_access/view/enable_notification.dart';
 import 'package:rydon/util/colors.dart';
 
-class AllowLocation extends StatefulWidget {
-  const AllowLocation({super.key});
+class EnableNotification extends StatefulWidget {
+  const EnableNotification({super.key});
 
   @override
-  State<AllowLocation> createState() => _AllowLocationState();
+  State<EnableNotification> createState() => _EnableNotificationState();
 }
 
-class _AllowLocationState extends State<AllowLocation> {
+class _EnableNotificationState extends State<EnableNotification> {
   @override
   Widget build(BuildContext context) {
+    final devSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Center(
         child: Column(
@@ -23,7 +22,7 @@ class _AllowLocationState extends State<AllowLocation> {
               radius: 50,
               backgroundColor: AppColors.textField,
               child: Icon(
-                CustomIcons.location,
+                Icons.notifications_none_outlined,
                 color: AppColors.signUpWith,
                 size: 50,
               ),
@@ -32,14 +31,14 @@ class _AllowLocationState extends State<AllowLocation> {
               height: 10,
             ),
             Text(
-              'What is Your Location?',
+              'Enable Notification Access',
               style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(
               height: 10,
             ),
             Text(
-              'We need to know your location in order to suggest nearby services',
+              'Enable notifications to receive real-time updates',
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
                     color: AppColors.signUpWith,
                   ),
@@ -50,15 +49,15 @@ class _AllowLocationState extends State<AllowLocation> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const EnableNotification(),
-                  ),
-                );
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => const AllowLocation(),
+                //   ),
+                // );
               },
               child: Text(
-                'Allow Location access',
+                'Allow Notification access',
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -68,20 +67,10 @@ class _AllowLocationState extends State<AllowLocation> {
             const SizedBox(
               height: 20,
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ManualLocation(),
-                  ),
-                );
-              },
-              child: const Text(
-                'Enter Location manually',
-                style: TextStyle(
-                    color: AppColors.signUpWith, fontWeight: FontWeight.bold),
-              ),
+            const Text(
+              'Maybe Later',
+              style: TextStyle(
+                  color: AppColors.signUpWith, fontWeight: FontWeight.bold),
             ),
           ],
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rydon/my_icons/custom_icons_icons.dart';
 import 'package:rydon/my_icons/my_flutter_app_icons.dart';
 import 'package:rydon/util/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -67,7 +68,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                   },
                   icon: isVisible
                       ? const Icon(
-                          MyFlutterApp.vector,
+                          CustomIcons.vector,
                           size: 17,
                           color: AppColors.textFieldHint,
                         )
